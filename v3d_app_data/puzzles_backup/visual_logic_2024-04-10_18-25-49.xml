@@ -1,17 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="589.9999999999999" scrolly="309.49999999999994" scale="0.9"></tab>
-  <tab name="main" type="MainTab" active="true" scrollx="214.26198113680675" scrolly="-31.607259953024368" scale="0.3">
+  <tab name="main" type="MainTab" active="true" scrollx="-942.725830078125" scrolly="-103.8319320678711" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="-I7y?d2V:ngu;qa,+HSZ" type="">x</variable>
       <variable id="tQCwD52c*DRxrTWl#;]o" type="">piece_dict</variable>
-      <variable id=")UW34%7.Z/CxnkA,,:0q" type="">m</variable>
       <variable id="tB)I8`q5YdbJ#Hra=0rr" type="">space</variable>
       <variable id="Qpk{!(%rMClnVkBaE(57" type="">j</variable>
       <variable id="Z]|IZUma8Mo~2;~4L7:i" type="">newpiece</variable>
       <variable id="#5m}p%}0)-d}$,Rwt#L_" type="">k</variable>
       <variable id="}5_M]g.OtiKy8QXR`,m," type="">i</variable>
     </variables>
-    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsWorld" id="|5Zz~{;0soReOldg|d{5" x="10" y="-430">
+    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsWorld" id="|5Zz~{;0soReOldg|d{5" x="10" y="-90">
       <field name="SOFT_BODY">FALSE</field>
       <value name="GRAVITY">
         <shadow type="math_number" id="*j5F6kJW)%l:owW|eF[0">
@@ -24,133 +23,7 @@
         </shadow>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="controls_forEach" id="$)eG,FMl|fQEcxD|du4Z" disabled="true" x="50" y="-290">
-      <field name="VAR" id=")UW34%7.Z/CxnkA,,:0q">m</field>
-      <value name="LIST">
-        <block type="dictGetKeys" id=":b[4udi~rWE^ST8lh(Ux">
-          <value name="DICT">
-            <block type="variables_get" id="IKoN@}b}tEp!Prx%$+wu">
-              <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
-            </block>
-          </value>
-        </block>
-      </value>
-      <statement name="DO">
-        <block type="show" id="V:PJRY(7f0:2s%PHt0.S">
-          <value name="VALUE">
-            <shadow type="objectList" id="o}r2touSee[XqRkqwKnQ">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="variables_get" id="9/nN)W6#DL$*4**{[NX5">
-              <field name="VAR" id=")UW34%7.Z/CxnkA,,:0q">m</field>
-            </block>
-          </value>
-          <next>
-            <block type="setObjTransform" id="~3h#?(_%Z7Z|j,8~-LB2">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
-              <field name="MODE">position</field>
-              <field name="OFFSET">FALSE</field>
-              <value name="TARGETOBJ">
-                <shadow type="objectList" id=";E;rUs}}Kf_I5!Y@uY)s">
-                  <field name="FIELDNAME">&lt;none&gt;</field>
-                </shadow>
-                <block type="variables_get" id=";^Eh2=6j!Q1IxtP?E:`n">
-                  <field name="VAR" id=")UW34%7.Z/CxnkA,,:0q">m</field>
-                </block>
-              </value>
-              <value name="X">
-                <block type="lists_getIndex" id="z*u9=6}vJB:H~-DM;gWA">
-                  <mutation statement="false" at="true"/>
-                  <field name="MODE">GET</field>
-                  <field name="WHERE">FROM_START</field>
-                  <value name="VALUE">
-                    <block type="dictGet" id="js1iJ--ubH1}imDqkyb4">
-                      <value name="DICT">
-                        <block type="variables_get" id="(agDOLFR;8h`^oy+DAUF">
-                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
-                        </block>
-                      </value>
-                      <value name="KEY">
-                        <shadow type="text" id="_$OT/-bW~qb=W7rqY=^1">
-                          <field name="TEXT">someKey</field>
-                        </shadow>
-                        <block type="variables_get" id="zYIr7`7bEHg4qEsOVwwP">
-                          <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="AT">
-                    <block type="math_number" id="?kf]*|wNSwx/|Cw+w:4i">
-                      <field name="NUM">0</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="Y">
-                <block type="lists_getIndex" id="Te)iRtgX%m:NL-p$l;1i">
-                  <mutation statement="false" at="true"/>
-                  <field name="MODE">GET</field>
-                  <field name="WHERE">FROM_START</field>
-                  <value name="VALUE">
-                    <block type="dictGet" id="g{|V-p*MU4?#ajv)(4/6">
-                      <value name="DICT">
-                        <block type="variables_get" id="VWTg)vth0xyw@8Rwt4i6">
-                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
-                        </block>
-                      </value>
-                      <value name="KEY">
-                        <shadow type="text">
-                          <field name="TEXT">someKey</field>
-                        </shadow>
-                        <block type="variables_get" id="n[QXcAZT#Krt!c=/ZjN$">
-                          <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="AT">
-                    <block type="math_number" id="DDK/fp7,!:Px30U_53P^">
-                      <field name="NUM">0</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="Z">
-                <block type="lists_getIndex" id="IA:w]YLvq9mVSSrT@Do:">
-                  <mutation statement="false" at="true"/>
-                  <field name="MODE">GET</field>
-                  <field name="WHERE">FROM_START</field>
-                  <value name="VALUE">
-                    <block type="dictGet" id="vp`2NM1MSG:^=yH*ekH]">
-                      <value name="DICT">
-                        <block type="variables_get" id="GMXrn|$FD1wz)(z:bFo(">
-                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
-                        </block>
-                      </value>
-                      <value name="KEY">
-                        <shadow type="text">
-                          <field name="TEXT">someKey</field>
-                        </shadow>
-                        <block type="variables_get" id="]KivXf*ZGheMrX3wGH1c">
-                          <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="AT">
-                    <block type="math_number" id="S{3R%)-dMpn13dXD^{$?">
-                      <field name="NUM">0</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="objConstraintAddLimit" id="V2[e,4*O:)qq00M+Chd0" x="48" y="9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="objConstraintAddLimit" id="V2[e,4*O:)qq00M+Chd0" x="10" y="-10">
       <mutation xmlns="http://www.w3.org/1999/xhtml" mode="POS_Z"></mutation>
       <field name="MODE">POS_Z</field>
       <field name="DIST_LIMIT_MODE">LIMITDIST_ONSURFACE</field>
@@ -684,45 +557,12 @@
                   </value>
                 </block>
               </value>
-              <next>
-                <block type="console.log" id="p5C6{R9t_Af^l#6{5Xt:">
-                  <value name="VALUE">
-                    <shadow type="text" id="2C`oo~m,v.s!8H-w1MUc">
-                      <field name="TEXT">Hello, Verge!</field>
-                    </shadow>
-                    <block type="dictGet" id="wh2S*ue;jTdoE%@}qXTj">
-                      <value name="DICT">
-                        <block type="variables_get" id="mi_cg,JweBMJ{4!F*F#i">
-                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
-                        </block>
-                      </value>
-                      <value name="KEY">
-                        <shadow type="text" id="=K+9Z+M}k`wwAjtJBy^Z">
-                          <field name="TEXT">someKey</field>
-                        </shadow>
-                        <block type="variables_get" id="!CbH@5!Qy9v(TR2Re|j-">
-                          <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="console.log" id="kAXxCNCaD2{k4zrM{g/s">
-                      <value name="VALUE">
-                        <shadow type="text" id=".;Oz~n}A]xLS+}]:eI3^">
-                          <field name="TEXT">Updated</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </statement>
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=".mw|Q;a96?ZOiuzX)L`c" x="50" y="750">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=".mw|Q;a96?ZOiuzX)L`c" x="10" y="730">
       <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
       <value name="VALUE">
         <block type="dictCreateEmpty" id="E/-.E2^aBfW#=1L6ay^k"/>
@@ -758,46 +598,37 @@
                         </shadow>
                       </value>
                       <statement name="DO">
-                        <block type="hide" id="#k$_F)fvRr/JQUjV1F}S">
+                        <block type="variables_set" id="o$7KGH%szs0Hy7j^})!+">
+                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                           <value name="VALUE">
-                            <shadow type="objectList" id="$HAk_GR-fz#fDY=5Kzx8">
-                              <field name="FIELDNAME">Scene</field>
-                            </shadow>
+                            <block type="cloneObject" id="!utv=|./Eb$vHHS;E-f3">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList" id="7%#$-#+k4W}p}P1qAS}L">
+                                  <field name="FIELDNAME">Halfcube</field>
+                                </shadow>
+                              </value>
+                            </block>
                           </value>
                           <next>
-                            <block type="variables_set" id="o$7KGH%szs0Hy7j^})!+">
-                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                            <block type="show" id=")j=jTa5)cB.MP2mPy:lE">
                               <value name="VALUE">
-                                <block type="cloneObject" id="!utv=|./Eb$vHHS;E-f3">
-                                  <value name="OBJECTINPUT">
-                                    <shadow type="objectList" id="7%#$-#+k4W}p}P1qAS}L">
-                                      <field name="FIELDNAME">Halfcube</field>
-                                    </shadow>
-                                  </value>
+                                <shadow type="objectList">
+                                  <field name="FIELDNAME">Two stud</field>
+                                </shadow>
+                                <block type="variables_get" id="%1yeCH5%x3Z`m!zn,hsa">
+                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="show" id=")j=jTa5)cB.MP2mPy:lE">
-                                  <value name="VALUE">
-                                    <shadow type="objectList">
-                                      <field name="FIELDNAME">Two stud</field>
-                                    </shadow>
-                                    <block type="variables_get" id="%1yeCH5%x3Z`m!zn,hsa">
+                                <block type="procedures_callnoreturn" id="1Cy4`o7g{;N[dXf3wt%#">
+                                  <mutation name="drag_move">
+                                    <arg name="x"/>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="variables_get" id="]c^Qi@=6ty!~,;i4mmMH">
                                       <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                     </block>
                                   </value>
-                                  <next>
-                                    <block type="procedures_callnoreturn" id="1Cy4`o7g{;N[dXf3wt%#">
-                                      <mutation name="drag_move">
-                                        <arg name="x"/>
-                                      </mutation>
-                                      <value name="ARG0">
-                                        <block type="variables_get" id="]c^Qi@=6ty!~,;i4mmMH">
-                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -814,46 +645,37 @@
                             </shadow>
                           </value>
                           <statement name="DO">
-                            <block type="show" id="39f@#hEMr5UElg?)!V2-">
+                            <block type="variables_set" id="Rg(*-h~Y,!uo+S5IV7om">
+                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                               <value name="VALUE">
-                                <shadow type="objectList" id="e[3ava^^Z1KF:-W$H;AV">
-                                  <field name="FIELDNAME">Scene</field>
-                                </shadow>
+                                <block type="cloneObject" id="=pADbsWW^YQ2!@|Hli:w">
+                                  <value name="OBJECTINPUT">
+                                    <shadow type="objectList" id="NBO[dX][q9}|c%x9qBkk">
+                                      <field name="FIELDNAME">Cube</field>
+                                    </shadow>
+                                  </value>
+                                </block>
                               </value>
                               <next>
-                                <block type="variables_set" id="Rg(*-h~Y,!uo+S5IV7om">
-                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                <block type="show" id="UHo_6*0s@U/jdJfaZZ/h">
                                   <value name="VALUE">
-                                    <block type="cloneObject" id="=pADbsWW^YQ2!@|Hli:w">
-                                      <value name="OBJECTINPUT">
-                                        <shadow type="objectList" id="NBO[dX][q9}|c%x9qBkk">
-                                          <field name="FIELDNAME">Cube</field>
-                                        </shadow>
-                                      </value>
+                                    <shadow type="objectList" id="qfnYnYMn+ACgU-4k/24P">
+                                      <field name="FIELDNAME">Two stud</field>
+                                    </shadow>
+                                    <block type="variables_get" id="qmQlD|`k.RW.p`cw|FmT">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="show" id="UHo_6*0s@U/jdJfaZZ/h">
-                                      <value name="VALUE">
-                                        <shadow type="objectList" id="qfnYnYMn+ACgU-4k/24P">
-                                          <field name="FIELDNAME">Two stud</field>
-                                        </shadow>
-                                        <block type="variables_get" id="qmQlD|`k.RW.p`cw|FmT">
+                                    <block type="procedures_callnoreturn" id="%OPxFD18VwNSHR`sMh;|">
+                                      <mutation name="drag_move">
+                                        <arg name="x"/>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="variables_get" id="l!Kyp@L%r[Hgtp+(2wDh">
                                           <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="procedures_callnoreturn" id="%OPxFD18VwNSHR`sMh;|">
-                                          <mutation name="drag_move">
-                                            <arg name="x"/>
-                                          </mutation>
-                                          <value name="ARG0">
-                                            <block type="variables_get" id="l!Kyp@L%r[Hgtp+(2wDh">
-                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>
@@ -901,32 +723,24 @@
                                               <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                             </block>
                                           </value>
+                                          <next>
+                                            <block type="console.log" id="p5C6{R9t_Af^l#6{5Xt:">
+                                              <value name="VALUE">
+                                                <shadow type="text" id="2C`oo~m,v.s!8H-w1MUc">
+                                                  <field name="TEXT">Hello, Verge!</field>
+                                                </shadow>
+                                                <block type="variables_get" id="mi_cg,JweBMJ{4!F*F#i">
+                                                  <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
                                         </block>
                                       </next>
                                     </block>
                                   </next>
                                 </block>
                               </statement>
-                              <next>
-                                <block type="eventHTMLElem" id="JZSpS.2=VI?q2EZ/2.+)">
-                                  <field name="EVENT">click</field>
-                                  <field name="PARENT">TRUE</field>
-                                  <value name="ID">
-                                    <shadow type="text" id="tU_)#1W0j2;dB49+E+jf">
-                                      <field name="TEXT">save</field>
-                                    </shadow>
-                                  </value>
-                                  <statement name="DO">
-                                    <block type="console.log" id="Uc!U=@3NRz:,{s8Hgyu%">
-                                      <value name="VALUE">
-                                        <shadow type="text" id="1q*-O!rtWDA+k?Q`jz58">
-                                          <field name="TEXT">Done</field>
-                                        </shadow>
-                                      </value>
-                                    </block>
-                                  </statement>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>

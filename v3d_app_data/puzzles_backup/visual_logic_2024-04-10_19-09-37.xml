@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="589.9999999999999" scrolly="309.49999999999994" scale="0.9"></tab>
-  <tab name="main" type="MainTab" active="true" scrollx="214.26198113680675" scrolly="-31.607259953024368" scale="0.3">
+  <tab name="main" type="MainTab" active="true" scrollx="200.9498596191404" scrolly="-1105.5001220703127" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="-I7y?d2V:ngu;qa,+HSZ" type="">x</variable>
       <variable id="tQCwD52c*DRxrTWl#;]o" type="">piece_dict</variable>
@@ -24,7 +24,7 @@
         </shadow>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="controls_forEach" id="$)eG,FMl|fQEcxD|du4Z" disabled="true" x="50" y="-290">
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_forEach" id="$)eG,FMl|fQEcxD|du4Z" x="30" y="-350">
       <field name="VAR" id=")UW34%7.Z/CxnkA,,:0q">m</field>
       <value name="LIST">
         <block type="dictGetKeys" id=":b[4udi~rWE^ST8lh(Ux">
@@ -149,6 +149,14 @@
           </next>
         </block>
       </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="appendScene" id="lW0~9FgcpRT%]R$@:`ZF" x="50" y="-150">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" enableonprogress="false" enableonerror="false" loadcameras="false" loadlights="false" enablealias="false"></mutation>
+      <value name="URL">
+        <shadow type="text" id="bkf[$DRHf11Y?-~w|UsN">
+          <field name="TEXT">path/to/scene.gltf</field>
+        </shadow>
+      </value>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="objConstraintAddLimit" id="V2[e,4*O:)qq00M+Chd0" x="48" y="9">
       <mutation xmlns="http://www.w3.org/1999/xhtml" mode="POS_Z"></mutation>
@@ -710,7 +718,7 @@
                     <block type="console.log" id="kAXxCNCaD2{k4zrM{g/s">
                       <value name="VALUE">
                         <shadow type="text" id=".;Oz~n}A]xLS+}]:eI3^">
-                          <field name="TEXT">Updated</field>
+                          <field name="TEXT">Hello, Verge!</field>
                         </shadow>
                       </value>
                     </block>
@@ -722,7 +730,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=".mw|Q;a96?ZOiuzX)L`c" x="50" y="750">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=".mw|Q;a96?ZOiuzX)L`c" x="10" y="730">
       <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
       <value name="VALUE">
         <block type="dictCreateEmpty" id="E/-.E2^aBfW#=1L6ay^k"/>
@@ -917,12 +925,26 @@
                                     </shadow>
                                   </value>
                                   <statement name="DO">
-                                    <block type="console.log" id="Uc!U=@3NRz:,{s8Hgyu%">
-                                      <value name="VALUE">
-                                        <shadow type="text" id="1q*-O!rtWDA+k?Q`jz58">
-                                          <field name="TEXT">Done</field>
+                                    <block type="sendData" id="PmhpBT@Z[CS-kpr~8-[e">
+                                      <value name="DATA">
+                                        <block type="text" id="vr*0qGoCWO!;+rG@dl`N">
+                                          <field name="TEXT">Hello, Verge!</field>
+                                        </block>
+                                      </value>
+                                      <value name="URL">
+                                        <shadow type="text" id="L[3]IpIT1o5q/U:hwsi3">
+                                          <field name="TEXT">./mydata.txt</field>
                                         </shadow>
                                       </value>
+                                      <statement name="DO">
+                                        <block type="console.log" id="Uc!U=@3NRz:,{s8Hgyu%">
+                                          <value name="VALUE">
+                                            <shadow type="text" id="1q*-O!rtWDA+k?Q`jz58">
+                                              <field name="TEXT">Done</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
                                     </block>
                                   </statement>
                                 </block>

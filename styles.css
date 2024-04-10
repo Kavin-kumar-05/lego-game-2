@@ -26,6 +26,14 @@ img{
 
 }
 
+#save{
+    height:50px;
+    width: 100px;
+    border: solid;
+    border-radius: 10px;
+    border-color: white;
+}
+
 #s2{
     border-color: yellow;
 }

@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="589.9999999999999" scrolly="309.4999999999999" scale="0.9"></tab>
-  <tab name="main" type="MainTab" active="true" scrollx="133.90219116210898" scrolly="-1117.018829345704" scale="1">
+  <tab name="main" type="MainTab" active="true" scrollx="217.54708136958288" scrolly="-171.18471247408024" scale="0.3768894828730004">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="tQCwD52c*DRxrTWl#;]o" type="">piece_dict</variable>
       <variable id="-I7y?d2V:ngu;qa,+HSZ" type="">x</variable>
@@ -689,7 +689,7 @@
                                       </value>
                                       <value name="FILENAME">
                                         <shadow type="text" id="6[s)j4(wKV8u5+h`,fC6">
-                                          <field name="TEXT">save_data.json</field>
+                                          <field name="TEXT">save_data.txt</field>
                                         </shadow>
                                       </value>
                                     </block>

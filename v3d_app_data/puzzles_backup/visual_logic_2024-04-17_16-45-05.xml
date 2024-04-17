@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="589.9999999999999" scrolly="309.4999999999999" scale="0.9"></tab>
-  <tab name="main" type="MainTab" active="true" scrollx="133.90219116210898" scrolly="-1117.018829345704" scale="1">
+  <tab name="main" type="MainTab" active="true" scrollx="199.10003662109375" scrolly="-1470.6650390625" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="tQCwD52c*DRxrTWl#;]o" type="">piece_dict</variable>
       <variable id="-I7y?d2V:ngu;qa,+HSZ" type="">x</variable>
@@ -689,7 +689,7 @@
                                       </value>
                                       <value name="FILENAME">
                                         <shadow type="text" id="6[s)j4(wKV8u5+h`,fC6">
-                                          <field name="TEXT">save_data.json</field>
+                                          <field name="TEXT">save_data.txt</field>
                                         </shadow>
                                       </value>
                                     </block>
@@ -933,18 +933,6 @@
                                                                       <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
                                                                     </block>
                                                                   </value>
-                                                                  <next>
-                                                                    <block type="procedures_callnoreturn" id="e;dTZ|;(^F?HrJV`g`~[">
-                                                                      <mutation name="drag_move">
-                                                                        <arg name="x"/>
-                                                                      </mutation>
-                                                                      <value name="ARG0">
-                                                                        <block type="variables_get" id="sy1mO3ILCY:W]1d9MF$Y">
-                                                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                                                        </block>
-                                                                      </value>
-                                                                    </block>
-                                                                  </next>
                                                                 </block>
                                                               </next>
                                                             </block>

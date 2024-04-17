@@ -1,17 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="589.9999999999999" scrolly="309.4999999999999" scale="0.9"></tab>
-  <tab name="main" type="MainTab" active="true" scrollx="133.90219116210898" scrolly="-1117.018829345704" scale="1">
+  <tab name="main" type="MainTab" active="true" scrollx="352.40082452769457" scrolly="-570.8411680220452" scale="0.613913253540759">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="tQCwD52c*DRxrTWl#;]o" type="">piece_dict</variable>
       <variable id="-I7y?d2V:ngu;qa,+HSZ" type="">x</variable>
+      <variable id="lP(W)P)EVotr;eR.(9lU" type="">save</variable>
+      <variable id=")UW34%7.Z/CxnkA,,:0q" type="">m</variable>
       <variable id="tB)I8`q5YdbJ#Hra=0rr" type="">space</variable>
       <variable id="Qpk{!(%rMClnVkBaE(57" type="">j</variable>
       <variable id="#5m}p%}0)-d}$,Rwt#L_" type="">k</variable>
       <variable id="Z]|IZUma8Mo~2;~4L7:i" type="">newpiece</variable>
       <variable id="}5_M]g.OtiKy8QXR`,m," type="">i</variable>
-      <variable id="lP(W)P)EVotr;eR.(9lU" type="">save</variable>
-      <variable id="+tZt0O3M*,A`Phm[mI5;" type="">n</variable>
-      <variable id="IL?-w6M_mrt27uiku*n)" type="">xx</variable>
     </variables>
     <block xmlns="https://developers.google.com/blockly/xml" type="objConstraintAddLimit" id="V2[e,4*O:)qq00M+Chd0" x="48" y="9">
       <mutation xmlns="http://www.w3.org/1999/xhtml" mode="POS_Z"></mutation>
@@ -689,9 +688,18 @@
                                       </value>
                                       <value name="FILENAME">
                                         <shadow type="text" id="6[s)j4(wKV8u5+h`,fC6">
-                                          <field name="TEXT">save_data.json</field>
+                                          <field name="TEXT">save_data.txt</field>
                                         </shadow>
                                       </value>
+                                      <next>
+                                        <block type="console.log" id="Uc!U=@3NRz:,{s8Hgyu%">
+                                          <value name="VALUE">
+                                            <shadow type="text" id="1q*-O!rtWDA+k?Q`jz58">
+                                              <field name="TEXT">Done</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </next>
                                     </block>
                                   </statement>
                                   <next>
@@ -708,251 +716,18 @@
                                           <statement name="DO">
                                             <block type="variables_set" id=",`Dd`F;9!P(|@|f){lFd">
                                               <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
-                                              <value name="VALUE">
-                                                <block type="readJSON" id=",610nM.%FJwRyMD)Zw]=">
-                                                  <value name="TEXT">
-                                                    <block type="openedFile" id="aIGjx[E2`C{Md#VwXXfY"/>
-                                                  </value>
-                                                </block>
-                                              </value>
                                               <next>
-                                                <block type="controls_forEach" id="%cQMDAjYguVw0nUj2Y]i">
-                                                  <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                  <value name="LIST">
-                                                    <block type="dictGetKeys" id="R[ven75.oBls1$vvUdXP">
-                                                      <value name="DICT">
-                                                        <block type="variables_get" id="ya{:e![F_Zs)1iTMi$H,">
-                                                          <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
-                                                        </block>
+                                                <block type="console.log" id="o-EQIentBkV)tKlj6w;,">
+                                                  <value name="VALUE">
+                                                    <shadow type="text" id="kLr1@Is%;1_Ch0m7H$D?">
+                                                      <field name="TEXT">Hello, Verge!</field>
+                                                    </shadow>
+                                                    <block type="readJSON" id=",610nM.%FJwRyMD)Zw]=">
+                                                      <value name="TEXT">
+                                                        <block type="openedFile" id="aIGjx[E2`C{Md#VwXXfY"/>
                                                       </value>
                                                     </block>
                                                   </value>
-                                                  <statement name="DO">
-                                                    <block type="controls_if" id="j#T29UpkXsM]M$3.f559">
-                                                      <mutation elseif="1" else="1"/>
-                                                      <value name="IF0">
-                                                        <block type="logic_compare" id="~Efe-%,y8%Qo[.wNGIfz">
-                                                          <field name="OP">EQ</field>
-                                                          <value name="A">
-                                                            <block type="text_count" id="B}M`?0=}O5|J$Mt}_o@o">
-                                                              <value name="SUB">
-                                                                <block type="text" id="L_}HLYRm]#c{x3H]ZMgA">
-                                                                  <field name="TEXT">Cube</field>
-                                                                </block>
-                                                              </value>
-                                                              <value name="TEXT">
-                                                                <block type="variables_get" id="WXe#n)wS0uz%vPO,;U4Q">
-                                                                  <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                                </block>
-                                                              </value>
-                                                            </block>
-                                                          </value>
-                                                          <value name="B">
-                                                            <block type="math_number" id="r1zm=vfm%dtFwpZqo3^U">
-                                                              <field name="NUM">1</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </value>
-                                                      <statement name="DO0">
-                                                        <block type="variables_set" id="x2*h/?bnAd1Z?q!ujs)G">
-                                                          <field name="VAR" id="IL?-w6M_mrt27uiku*n)">xx</field>
-                                                          <value name="VALUE">
-                                                            <block type="objectList" id="~hH(-x:8rhcqqAN68-I^">
-                                                              <field name="FIELDNAME">Cube</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </statement>
-                                                      <value name="IF1">
-                                                        <block type="logic_compare" id="Pk`)SUzKniuVYjMbwfNM">
-                                                          <field name="OP">EQ</field>
-                                                          <value name="A">
-                                                            <block type="text_count" id="M/j[`_tU^r8T?V-e*;nN">
-                                                              <value name="SUB">
-                                                                <block type="text" id="of:|#-C()t%@K9Wb[Y/G">
-                                                                  <field name="TEXT">Rectangle</field>
-                                                                </block>
-                                                              </value>
-                                                              <value name="TEXT">
-                                                                <block type="variables_get" id="ZS.x1Yy7tCwp(]U*T?CY">
-                                                                  <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                                </block>
-                                                              </value>
-                                                            </block>
-                                                          </value>
-                                                          <value name="B">
-                                                            <block type="math_number" id="RD.cdB`em2#!w*gY,[8a">
-                                                              <field name="NUM">1</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </value>
-                                                      <statement name="DO1">
-                                                        <block type="variables_set" id="FF`iNNq(v?B|P}aA)j95">
-                                                          <field name="VAR" id="IL?-w6M_mrt27uiku*n)">xx</field>
-                                                          <value name="VALUE">
-                                                            <block type="objectList" id="MbtVu;dS|r1anu!u(ee$">
-                                                              <field name="FIELDNAME">Rectangle</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </statement>
-                                                      <statement name="ELSE">
-                                                        <block type="variables_set" id="Gj4UxJx~RZ,Dd{9U%v41">
-                                                          <field name="VAR" id="IL?-w6M_mrt27uiku*n)">xx</field>
-                                                          <value name="VALUE">
-                                                            <block type="objectList" id="|iQ4n3088@V3CT)S7!~/">
-                                                              <field name="FIELDNAME">Halfcube</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </statement>
-                                                      <next>
-                                                        <block type="variables_set" id="Q`/uA{}pQZ^p{-}+Aft8">
-                                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                                          <value name="VALUE">
-                                                            <block type="cloneObject" id=";QM?L?H1T;/?{`,7+G3i">
-                                                              <value name="OBJECTINPUT">
-                                                                <shadow type="objectList" id="6o@Z%Z3opBjTR}~}OW2d">
-                                                                  <field name="FIELDNAME">Cube</field>
-                                                                </shadow>
-                                                                <block type="variables_get" id="*7F5?uA!9mWH!#Mw}g=i">
-                                                                  <field name="VAR" id="IL?-w6M_mrt27uiku*n)">xx</field>
-                                                                </block>
-                                                              </value>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="setObjTransform" id="~3h#?(_%Z7Z|j,8~-LB2">
-                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
-                                                              <field name="MODE">position</field>
-                                                              <field name="OFFSET">FALSE</field>
-                                                              <value name="TARGETOBJ">
-                                                                <shadow type="objectList" id=";E;rUs}}Kf_I5!Y@uY)s">
-                                                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                                                </shadow>
-                                                                <block type="variables_get" id="(nKnnBQ:8!+q6/r;m0Al">
-                                                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                                                </block>
-                                                              </value>
-                                                              <value name="X">
-                                                                <block type="lists_getIndex" id="}.lzK*1YNW*jZt?bK221">
-                                                                  <mutation statement="false" at="true"/>
-                                                                  <field name="MODE">GET</field>
-                                                                  <field name="WHERE">FROM_START</field>
-                                                                  <value name="VALUE">
-                                                                    <block type="dictGet" id="nDi|n#|CSO,}@_QWJ#fW">
-                                                                      <value name="DICT">
-                                                                        <block type="variables_get" id="#ghwH$=*WKNM%$,y.~S8">
-                                                                          <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
-                                                                        </block>
-                                                                      </value>
-                                                                      <value name="KEY">
-                                                                        <shadow type="text" id="`Oc*c;#fd%[,2e!lq~Ls">
-                                                                          <field name="TEXT">someKey</field>
-                                                                        </shadow>
-                                                                        <block type="variables_get" id="Bh7At3{,flb8k@#Q0|j_">
-                                                                          <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                                        </block>
-                                                                      </value>
-                                                                    </block>
-                                                                  </value>
-                                                                  <value name="AT">
-                                                                    <block type="math_number" id="1`9}233*Lp,aSE*/IZJO">
-                                                                      <field name="NUM">0</field>
-                                                                    </block>
-                                                                  </value>
-                                                                </block>
-                                                              </value>
-                                                              <value name="Y">
-                                                                <block type="lists_getIndex" id="Te)iRtgX%m:NL-p$l;1i">
-                                                                  <mutation statement="false" at="true"/>
-                                                                  <field name="MODE">GET</field>
-                                                                  <field name="WHERE">FROM_START</field>
-                                                                  <value name="VALUE">
-                                                                    <block type="dictGet" id="g{|V-p*MU4?#ajv)(4/6">
-                                                                      <value name="DICT">
-                                                                        <block type="variables_get" id="VWTg)vth0xyw@8Rwt4i6">
-                                                                          <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
-                                                                        </block>
-                                                                      </value>
-                                                                      <value name="KEY">
-                                                                        <shadow type="text">
-                                                                          <field name="TEXT">someKey</field>
-                                                                        </shadow>
-                                                                        <block type="variables_get" id="n[QXcAZT#Krt!c=/ZjN$">
-                                                                          <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                                        </block>
-                                                                      </value>
-                                                                    </block>
-                                                                  </value>
-                                                                  <value name="AT">
-                                                                    <block type="math_number" id="DDK/fp7,!:Px30U_53P^">
-                                                                      <field name="NUM">1</field>
-                                                                    </block>
-                                                                  </value>
-                                                                </block>
-                                                              </value>
-                                                              <value name="Z">
-                                                                <block type="lists_getIndex" id="IA:w]YLvq9mVSSrT@Do:">
-                                                                  <mutation statement="false" at="true"/>
-                                                                  <field name="MODE">GET</field>
-                                                                  <field name="WHERE">FROM_START</field>
-                                                                  <value name="VALUE">
-                                                                    <block type="dictGet" id="vp`2NM1MSG:^=yH*ekH]">
-                                                                      <value name="DICT">
-                                                                        <block type="variables_get" id="GMXrn|$FD1wz)(z:bFo(">
-                                                                          <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
-                                                                        </block>
-                                                                      </value>
-                                                                      <value name="KEY">
-                                                                        <shadow type="text">
-                                                                          <field name="TEXT">someKey</field>
-                                                                        </shadow>
-                                                                        <block type="variables_get" id="]KivXf*ZGheMrX3wGH1c">
-                                                                          <field name="VAR" id="+tZt0O3M*,A`Phm[mI5;">n</field>
-                                                                        </block>
-                                                                      </value>
-                                                                    </block>
-                                                                  </value>
-                                                                  <value name="AT">
-                                                                    <block type="math_number" id="S{3R%)-dMpn13dXD^{$?">
-                                                                      <field name="NUM">2</field>
-                                                                    </block>
-                                                                  </value>
-                                                                </block>
-                                                              </value>
-                                                              <next>
-                                                                <block type="show" id="^feXCR3(3]6{JE-O_*b=">
-                                                                  <value name="VALUE">
-                                                                    <shadow type="objectList" id="UrW*He5#LYDGac|.(!Co">
-                                                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                                                    </shadow>
-                                                                    <block type="variables_get" id="($MX9z2;S]7109bbTtRl">
-                                                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                                                    </block>
-                                                                  </value>
-                                                                  <next>
-                                                                    <block type="procedures_callnoreturn" id="e;dTZ|;(^F?HrJV`g`~[">
-                                                                      <mutation name="drag_move">
-                                                                        <arg name="x"/>
-                                                                      </mutation>
-                                                                      <value name="ARG0">
-                                                                        <block type="variables_get" id="sy1mO3ILCY:W]1d9MF$Y">
-                                                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
-                                                                        </block>
-                                                                      </value>
-                                                                    </block>
-                                                                  </next>
-                                                                </block>
-                                                              </next>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </statement>
                                                 </block>
                                               </next>
                                             </block>
@@ -1040,10 +815,158 @@
                   </value>
                 </block>
               </value>
+              <next>
+                <block type="console.log" id="p5C6{R9t_Af^l#6{5Xt:">
+                  <value name="VALUE">
+                    <shadow type="text" id="2C`oo~m,v.s!8H-w1MUc">
+                      <field name="TEXT">Hello, Verge!</field>
+                    </shadow>
+                    <block type="dictGet" id="wh2S*ue;jTdoE%@}qXTj">
+                      <value name="DICT">
+                        <block type="variables_get" id="mi_cg,JweBMJ{4!F*F#i">
+                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                        </block>
+                      </value>
+                      <value name="KEY">
+                        <shadow type="text" id="=K+9Z+M}k`wwAjtJBy^Z">
+                          <field name="TEXT">someKey</field>
+                        </shadow>
+                        <block type="variables_get" id="!CbH@5!Qy9v(TR2Re|j-">
+                          <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="console.log" id="YWLUxpdkrbE1nV/7}7k$">
+                      <value name="VALUE">
+                        <shadow type="text" id="V}i8*H1XGSp7PVDG^LPI">
+                          <field name="TEXT">Hello, Verge!</field>
+                        </shadow>
+                        <block type="variables_get" id="$Qq2t.y|,+ePK_rlvHsX">
+                          <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="console.log" id="kAXxCNCaD2{k4zrM{g/s">
+                          <value name="VALUE">
+                            <shadow type="text" id=".;Oz~n}A]xLS+}]:eI3^">
+                              <field name="TEXT">Updated</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </statement>
         </block>
       </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="Zm*dRJLhYpE2S8$}-J6m" x="650" y="1650">
+      <field name="VAR" id="lP(W)P)EVotr;eR.(9lU">save</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setObjTransform" id="~3h#?(_%Z7Z|j,8~-LB2" disabled="true" x="350" y="1856">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+      <field name="MODE">position</field>
+      <field name="OFFSET">FALSE</field>
+      <value name="TARGETOBJ">
+        <shadow type="objectList" id=";E;rUs}}Kf_I5!Y@uY)s">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="variables_get" id=";^Eh2=6j!Q1IxtP?E:`n">
+          <field name="VAR" id=")UW34%7.Z/CxnkA,,:0q">m</field>
+        </block>
+      </value>
+      <value name="X">
+        <block type="lists_getIndex" id="z*u9=6}vJB:H~-DM;gWA">
+          <mutation statement="false" at="true"/>
+          <field name="MODE">GET</field>
+          <field name="WHERE">FROM_START</field>
+          <value name="VALUE">
+            <block type="dictGet" id="js1iJ--ubH1}imDqkyb4">
+              <value name="DICT">
+                <block type="variables_get" id="(agDOLFR;8h`^oy+DAUF">
+                  <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                </block>
+              </value>
+              <value name="KEY">
+                <shadow type="text" id="_$OT/-bW~qb=W7rqY=^1">
+                  <field name="TEXT">someKey</field>
+                </shadow>
+                <block type="variables_get" id="zYIr7`7bEHg4qEsOVwwP">
+                  <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="AT">
+            <block type="math_number" id="?kf]*|wNSwx/|Cw+w:4i">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <value name="Y">
+        <block type="lists_getIndex" id="Te)iRtgX%m:NL-p$l;1i">
+          <mutation statement="false" at="true"/>
+          <field name="MODE">GET</field>
+          <field name="WHERE">FROM_START</field>
+          <value name="VALUE">
+            <block type="dictGet" id="g{|V-p*MU4?#ajv)(4/6">
+              <value name="DICT">
+                <block type="variables_get" id="VWTg)vth0xyw@8Rwt4i6">
+                  <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                </block>
+              </value>
+              <value name="KEY">
+                <shadow type="text">
+                  <field name="TEXT">someKey</field>
+                </shadow>
+                <block type="variables_get" id="n[QXcAZT#Krt!c=/ZjN$">
+                  <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="AT">
+            <block type="math_number" id="DDK/fp7,!:Px30U_53P^">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <value name="Z">
+        <block type="lists_getIndex" id="IA:w]YLvq9mVSSrT@Do:">
+          <mutation statement="false" at="true"/>
+          <field name="MODE">GET</field>
+          <field name="WHERE">FROM_START</field>
+          <value name="VALUE">
+            <block type="dictGet" id="vp`2NM1MSG:^=yH*ekH]">
+              <value name="DICT">
+                <block type="variables_get" id="GMXrn|$FD1wz)(z:bFo(">
+                  <field name="VAR" id="tQCwD52c*DRxrTWl#;]o">piece_dict</field>
+                </block>
+              </value>
+              <value name="KEY">
+                <shadow type="text">
+                  <field name="TEXT">someKey</field>
+                </shadow>
+                <block type="variables_get" id="]KivXf*ZGheMrX3wGH1c">
+                  <field name="VAR" id="-I7y?d2V:ngu;qa,+HSZ">x</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="AT">
+            <block type="math_number" id="S{3R%)-dMpn13dXD^{$?">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+      </value>
     </block>
   </tab>
   <editorsettings viewport-x="528.4001098632812" viewport-y="210.39995574951172" viewport-w="614.4" viewport-h="347.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
